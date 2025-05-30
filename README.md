@@ -1,8 +1,8 @@
 
 
-<div style="display:flex;justify-content:center">
+<div align="center">
 
 <img src="image.png" height="500px"/>
-<img src="image-1.png" height="300px"/>
+<!-- <img src="image-1.png" height="300px"/> -->
 
 <div>
