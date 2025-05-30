@@ -97,13 +97,13 @@ export default function PDFQuizGenerator() {
               <span className="text-2xl"><Image src="/image.png" alt="Description" width={300} height={300} /></span>
             </div>
             <div>
-              <h1 className="text-4xl font-bold text-[#F97A00]">
+              <h1 style={{fontFamily:"Fredoka One"}} className="text-5xl font-bold text-[#F97A00]">
                 Teddy
               </h1>
-              <p className="text-sm font-medium text-gray-700">Quiz Generator</p>
+              <p className="text-sm font-bold text-green-600">Quiz Generator</p>
             </div>
           </div>
-          <p className="text-lg text-gray-800 max-w-2xl mx-auto">
+          <p style={{fontFamily:"Quicksand",fontWeight:"bold"}} className="text-lg text-gray-800 max-w-2xl mx-auto">
             Upload your PDF documents and let Teddy create intelligent multiple choice quizzes to test your knowledge
           </p>
         </div>
