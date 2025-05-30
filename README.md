@@ -1,4 +1,4 @@
 
-<div style="display:flex;justify-content:center;margin-left:200px">
+<div style="display:flex;justify-content:center">
   <img src="image.png" height="500px"/>
 <div>
