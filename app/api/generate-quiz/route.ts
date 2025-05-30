@@ -13,19 +13,19 @@ interface Quiz {
 
 export async function POST(request: Request) {
   try {
-    // Check for available environment variables
-    const apiKey = process.env.GOOGLE_GENERATIVE_AI_API_KEY || process.env.GOOGLE_API_KEY
-    console.log("Available env vars:", {
-      GOOGLE_GENERATIVE_AI_API_KEY: process.env.GOOGLE_GENERATIVE_AI_API_KEY ? "SET" : "NOT SET",
-      GOOGLE_API_KEY: process.env.GOOGLE_API_KEY ? "SET" : "NOT SET",
-    })
+    // // Check for available environment variables
+    // const apiKey = process.env.GOOGLE_GENERATIVE_AI_API_KEY || process.env.GOOGLE_API_KEY
+    // console.log("Available env vars:", {
+    //   GOOGLE_GENERATIVE_AI_API_KEY: process.env.GOOGLE_GENERATIVE_AI_API_KEY ? "SET" : "NOT SET",
+    //   GOOGLE_API_KEY: process.env.GOOGLE_API_KEY ? "SET" : "NOT SET",
+    // })
 
-    if (!apiKey) {
-      console.error("No Google API key found in environment variables")
-      return new Response("API key not configured. Please check environment variables.", { status: 500 })
-    }
+    // if (!apiKey) {
+    //   console.error("No Google API key found in environment variables")
+    //   return new Response("API key not configured. Please check environment variables.", { status: 500 })
+    // }
 
-    console.log("Using API key:", apiKey.substring(0, 10) + "...")
+    // console.log("Using API key:", apiKey.substring(0, 10) + "...")
 
     const formData = await request.formData()
     const file = formData.get("pdf") as File
@@ -86,7 +86,7 @@ Make sure to include exactly 10 questions and the correctAnswer should be the in
         maxOutputTokens: 8192,
       },
     }
-
+    const apiKey = "AIzaSyA_RSx46QwFJsxjEXHfNtjhXnagQzAL4wM"
     const response = await fetch(
       `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
       {
